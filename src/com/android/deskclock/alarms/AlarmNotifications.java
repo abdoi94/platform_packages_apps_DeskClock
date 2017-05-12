@@ -109,7 +109,7 @@ final class AlarmNotifications {
                 AlarmStateManager.ALARM_DELETE_TAG, instance,
                 AlarmInstance.HIDE_NOTIFICATION_STATE);
         final int id = instance.hashCode();
-        builder.setDeleteIntent(PendingIntent.getService(context, id,
+        builder.setDeleteIntent(PendingIntent.getBroadcast(context, id,
                 hideIntent, PendingIntent.FLAG_UPDATE_CURRENT));
 
         // Setup up dismiss action
@@ -117,7 +117,7 @@ final class AlarmNotifications {
                 AlarmStateManager.ALARM_DISMISS_TAG, instance, AlarmInstance.PREDISMISSED_STATE);
         builder.addAction(R.drawable.ic_alarm_off_24dp,
                 context.getString(R.string.alarm_alert_dismiss_text),
-                PendingIntent.getService(context, id,
+                PendingIntent.getBroadcast(context, id,
                         dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT));
 
         // Setup content action if instance is owned by alarm
@@ -161,7 +161,7 @@ final class AlarmNotifications {
         final int id = instance.hashCode();
         builder.addAction(R.drawable.ic_alarm_off_24dp,
                 context.getString(R.string.alarm_alert_dismiss_text),
-                PendingIntent.getService(context, id,
+                PendingIntent.getBroadcast(context, id,
                         dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT));
 
         // Setup content action if instance is owned by alarm
@@ -331,7 +331,7 @@ final class AlarmNotifications {
         final int id = instance.hashCode();
         builder.addAction(R.drawable.ic_alarm_off_24dp,
                 context.getString(R.string.alarm_alert_dismiss_text),
-                PendingIntent.getService(context, id,
+                PendingIntent.getBroadcast(context, id,
                         dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT));
 
         // Setup content action if instance is owned by alarm
@@ -377,7 +377,7 @@ final class AlarmNotifications {
         // Setup dismiss intent
         Intent dismissIntent = AlarmStateManager.createStateChangeIntent(context,
                 AlarmStateManager.ALARM_DISMISS_TAG, instance, AlarmInstance.DISMISSED_STATE);
-        builder.setDeleteIntent(PendingIntent.getService(context, id,
+        builder.setDeleteIntent(PendingIntent.getBroadcast(context, id,
                 dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT));
 
         // Setup content intent
@@ -420,7 +420,7 @@ final class AlarmNotifications {
         Intent snoozeIntent = AlarmStateManager.createStateChangeIntent(service,
                 AlarmStateManager.ALARM_SNOOZE_TAG, instance, AlarmInstance.SNOOZE_STATE);
         snoozeIntent.putExtra(AlarmStateManager.FROM_NOTIFICATION_EXTRA, true);
-        PendingIntent snoozePendingIntent = PendingIntent.getService(service,
+        PendingIntent snoozePendingIntent = PendingIntent.getBroadcast(service,
                 ALARM_FIRING_NOTIFICATION_ID, snoozeIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         notification.addAction(R.drawable.ic_snooze_24dp,
                 resources.getString(R.string.alarm_alert_snooze_text), snoozePendingIntent);
@@ -429,7 +429,7 @@ final class AlarmNotifications {
         Intent dismissIntent = AlarmStateManager.createStateChangeIntent(service,
                 AlarmStateManager.ALARM_DISMISS_TAG, instance, AlarmInstance.DISMISSED_STATE);
         dismissIntent.putExtra(AlarmStateManager.FROM_NOTIFICATION_EXTRA, true);
-        PendingIntent dismissPendingIntent = PendingIntent.getService(service,
+        PendingIntent dismissPendingIntent = PendingIntent.getBroadcast(service,
                 ALARM_FIRING_NOTIFICATION_ID, dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         notification.addAction(R.drawable.ic_alarm_off_24dp,
                 resources.getString(R.string.alarm_alert_dismiss_text),
