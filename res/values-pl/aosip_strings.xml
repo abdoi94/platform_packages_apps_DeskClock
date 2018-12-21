@@ -18,15 +18,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Device flip action</string>
+    <string name="flip_action_title">Reakcja na odwrócenie urządzenia</string>
     <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">Device shake action</string>
+    <string name="shake_action_title">Reakcja na potrząśnięcie urządzenia</string>
     <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
-        <item>Snooze</item>
-        <item>Dismiss</item>
-        <item>Nothing</item>
+        <item>Drzemka</item>
+        <item>Odrzuć</item>
+        <item>Nic</item>
     </string-array>
     <!-- Setting title for accessing the cLock widget settings -->
-    <string name="menu_item_widget_settings">Widget settings</string>
+    <string name="menu_item_widget_settings">Ustawienia Widżetów</string>
 </resources>
