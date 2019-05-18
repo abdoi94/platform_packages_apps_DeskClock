@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Действие при перевовороте телефона</string>
+    <string name="flip_action_title">Действие при перевороте телефона</string>
     <!-- Setting title for the shake action setting. -->
     <string name="shake_action_title">Действие при встряхивании телефона</string>
     <!-- Entries listed in the setting flip and shake. -->
