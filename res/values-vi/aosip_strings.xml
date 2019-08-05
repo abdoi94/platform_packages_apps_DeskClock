@@ -20,7 +20,7 @@
     <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Lật úp thiết bị</string>
     <!-- Setting title for the shake action setting. -->
-    <string name="shake_action_title">Lắc thiết bị</string>
+    <string name="shake_action_title">Hành động lắc thiết bị</string>
     <!-- Entries listed in the setting flip and shake. -->
     <string-array name="action_setting_entries">
         <item>Báo lại</item>
